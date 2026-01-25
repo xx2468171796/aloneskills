@@ -47,7 +47,7 @@ description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 
 
 | 技术 | 版本 | 用途 |
 |------|------|------|
-| **pnpm/yarn** | latest | 包管理 |
+| **Yarn** | v4 (Berry) | 包管理 |
 | **Biome** | latest | Lint + Format |
 | **Vitest** | latest | 单元测试 |
 | **Playwright** | latest | E2E 测试 |
@@ -67,18 +67,18 @@ cd my-app
 
 ```bash
 # 核心依赖
-pnpm add @tanstack/react-query zustand zod react-hook-form @hookform/resolvers
+yarn add @tanstack/react-query zustand zod react-hook-form @hookform/resolvers
 
 # Prisma
-pnpm add -D prisma
-pnpm add @prisma/client
+yarn add -D prisma
+yarn add @prisma/client
 
 # Auth.js
-pnpm add next-auth@beta @auth/prisma-adapter
+yarn add next-auth@beta @auth/prisma-adapter
 
 # 工具
-pnpm add bcryptjs
-pnpm add -D @types/bcryptjs
+yarn add bcryptjs
+yarn add -D @types/bcryptjs
 ```
 
 ### 3. 配置 shadcn/ui
@@ -91,14 +91,14 @@ npx shadcn@latest add button input card form dialog table toast
 ### 4. 配置 Biome
 
 ```bash
-pnpm add -D @biomejs/biome
+yarn add -D @biomejs/biome
 npx biome init
 ```
 
 ### 5. 配置 Vitest
 
 ```bash
-pnpm add -D vitest @vitejs/plugin-react jsdom @testing-library/react
+yarn add -D vitest @vitejs/plugin-react jsdom @testing-library/react
 ```
 
 ## 目录结构

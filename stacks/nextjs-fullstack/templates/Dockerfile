@@ -12,8 +12,8 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # 复制依赖文件
-COPY package.json pnpm-lock.yaml* ./
-RUN corepack enable pnpm && pnpm install --frozen-lockfile
+COPY package.json yarn.lock* ./
+RUN corepack enable && yarn install --immutable
 
 # ===========================================
 # 构建阶段
@@ -31,7 +31,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npx prisma generate
 
 # 构建应用
-RUN corepack enable pnpm && pnpm run build
+RUN corepack enable && yarn build
 
 # ===========================================
 # 生产运行阶段

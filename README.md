@@ -88,6 +88,27 @@ aloneskills/
 - **桌面端**: Tauri v2
 - **测试**: Vitest + Playwright
 
+## 🛠️ 技术栈模板
+
+除了技能，本仓库还提供开箱即用的技术栈配置：
+
+| 技术栈 | 说明 |
+|--------|------|
+| [`nextjs-fullstack`](./stacks/nextjs-fullstack/STACK.md) | Next.js 16 + React 19 + Tailwind + shadcn/ui + Prisma + Auth.js |
+
+### 技术栈内容
+
+```
+stacks/nextjs-fullstack/
+├── STACK.md              # 技术栈说明
+├── rules.md              # 项目规则与约束
+└── templates/
+    ├── env.example       # 环境变量模板
+    ├── docker-compose.yml # Docker 配置
+    ├── Dockerfile        # 生产镜像
+    └── prisma-schema.prisma # Prisma 模板
+```
+
 ## 📄 规范参考
 
 - [Agent Skills 官方文档](https://agentskills.io/)

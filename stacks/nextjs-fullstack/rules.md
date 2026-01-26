@@ -105,6 +105,27 @@ chore(deps): upgrade dependencies
 | `test` | 测试相关 |
 | `style` | 格式调整 |
 
+## 应用到本项目的规则路径
+
+将通用技术栈规则落地到具体项目时，建议在项目根目录创建如下目录结构，并把规则文件放入其中：
+
+```
+<project-root>/
+└── .windsurf/
+    └── rules/
+        └── 1.md
+```
+
+### 推荐移动/复制方式
+
+```bash
+# 在目标项目根目录执行
+mkdir -p .windsurf/rules
+cp aloneskills/stacks/nextjs-fullstack/rules.md .windsurf/rules/1.md
+```
+
+> 说明：`.windsurf/rules/1.md` 为项目级规则入口文件，可按需拆分为多条规则文件。
+
 ## 文件组织
 
 ### Server Actions

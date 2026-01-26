@@ -40,6 +40,23 @@ git submodule add https://github.com/xx2468171796/aloneskills.git skills
 cp -r skills/*/SKILL.md .windsurf/workflows/
 ```
 
+### 📦 移植到项目的路径映射
+
+后续移植只需阅读本仓库并按以下路径拷贝到目标项目：
+
+| 资源 | 仓库路径 | 目标项目路径 |
+|------|----------|--------------|
+| 技能 | `skills/<skill>/SKILL.md` | `.windsurf/workflows/<skill>.md` |
+| 通用规则 | `stacks/nextjs-fullstack/rules.md` | `.windsurf/rules/project-rules.md` |
+
+示例（在目标项目根目录执行）：
+
+```bash
+mkdir -p .windsurf/workflows .windsurf/rules
+cp aloneskills/skills/*/SKILL.md .windsurf/workflows/
+cp aloneskills/stacks/nextjs-fullstack/rules.md .windsurf/rules/project-rules.md
+```
+
 ## 📖 技能工作原理
 
 ```

@@ -1,0 +1,15 @@
+{
+  "name": "aloneskills",
+  "private": true,
+  "packageManager": "yarn@4.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  }
+}

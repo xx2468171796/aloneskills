@@ -1,6 +1,6 @@
 ---
 name: nextjs-fullstack
-description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 19 + Tailwind CSS v4 + shadcn/ui + Prisma + Auth.js 的现代全栈项目。
+description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 19 + Tailwind CSS v4 + HeroUI + Prisma + Auth.js 的现代全栈项目。
 ---
 
 # Next.js 全栈技术栈
@@ -17,7 +17,7 @@ description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 
 | **React** | 19 | UI 框架 |
 | **TypeScript** | 5.x | 类型安全 (Strict Mode) |
 | **Tailwind CSS** | v4 | 样式引擎 |
-| **shadcn/ui** | latest | 组件库 |
+| **HeroUI** | latest | 默认组件库（未指定时优先使用） |
 | **Lucide React** | latest | 图标库 |
 | **Zustand** | v5 | 客户端状态管理 |
 | **TanStack Query** | v5 | 服务端状态管理 |
@@ -40,7 +40,6 @@ description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 
 |------|------|------|
 | **Turbopack** | - | 开发构建 |
 | **Standalone** | - | 生产构建 |
-| **Docker** | - | 容器化 |
 | **Tauri** | v2 | 桌面端 (可选) |
 
 ### 开发工具 (DevTools)
@@ -58,48 +57,7 @@ description: Next.js 全栈项目技术栈配置。适用于 Next.js 16 + React 
 
 ### 1. 创建项目
 
-```bash
-npx create-next-app@latest my-app --typescript --tailwind --app --src-dir
-cd my-app
-```
-
-### 2. 安装依赖
-
-```bash
-# 核心依赖
-yarn add @tanstack/react-query zustand zod react-hook-form @hookform/resolvers
-
-# Prisma
-yarn add -D prisma
-yarn add @prisma/client
-
-# Auth.js
-yarn add next-auth@beta @auth/prisma-adapter
-
-# 工具
-yarn add bcryptjs
-yarn add -D @types/bcryptjs
-```
-
-### 3. 配置 shadcn/ui
-
-```bash
-npx shadcn@latest init
-npx shadcn@latest add button input card form dialog table toast
-```
-
-### 4. 配置 Biome
-
-```bash
-yarn add -D @biomejs/biome
-npx biome init
-```
-
-### 5. 配置 Vitest
-
-```bash
-yarn add -D vitest @vitejs/plugin-react jsdom @testing-library/react
-```
+使用 `create-next-app` 初始化，开启 App Router 与 Tailwind，然后按需补齐依赖（Zod、React Hook Form、TanStack Query 等）。
 
 ## 目录结构
 
@@ -111,7 +69,7 @@ src/
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components/
-│   ├── ui/                # shadcn/ui 组件
+│   ├── ui/                # HeroUI 组件（未指定时默认）
 │   ├── shared/            # 业务通用组件
 │   └── features/          # 业务特定组件
 ├── actions/               # Server Actions

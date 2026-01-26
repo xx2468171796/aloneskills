@@ -6,7 +6,7 @@
   "skills": [
     {
       "name": "ui-ux-pro-max",
-      "description": "AI 驱动的设计智能技能。当需要构建 UI/UX（设计、创建、实现、审查、修复、改进界面）时使用此技能。提供 UI 风格、配色方案、字体搭配、图表类型和 UX 指南的智能推荐。适用于 React + Tailwind CSS + shadcn/ui 技术栈。",
+      "description": "AI 驱动的设计智能技能。当需要构建 UI/UX（设计、创建、实现、审查、修复、改进界面）时使用此技能。提供 UI 风格、配色方案、字体搭配、图表类型和 UX 指南的智能推荐。默认使用 HeroUI（未指定时优先）。",
       "path": "skills/ui-ux-pro-max/SKILL.md"
     },
     {
@@ -21,12 +21,12 @@
     },
     {
       "name": "ui-components",
-      "description": "UI 组件开发技能。在需要创建页面、组件、表单、表格、弹窗等 UI 元素时使用此技能。适用于 React + shadcn/ui + Tailwind CSS + 原子化设计模式。",
+      "description": "UI 组件开发技能。在需要创建页面、组件、表单、表格、弹窗等 UI 元素时使用此技能。默认使用 HeroUI（如需 shadcn/ui 必须明确说明）。",
       "path": "skills/ui-components/SKILL.md"
     },
     {
       "name": "build-standards",
-      "description": "打包构建规范技能。在需要配置开发环境、生产构建、Docker 镜像、桌面端、环境变量等时使用此技能。适用于 Next.js + Turbopack + Docker + Tauri 技术栈。",
+      "description": "打包构建规范技能。在需要配置开发环境、生产构建、桌面端、环境变量等时使用此技能。适用于 Next.js + Turbopack + Tauri 技术栈。",
       "path": "skills/build-standards/SKILL.md"
     },
     {

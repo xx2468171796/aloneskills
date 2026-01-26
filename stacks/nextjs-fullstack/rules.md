@@ -26,7 +26,7 @@
 | 规则 | 说明 |
 |------|------|
 | Server Actions | 所有后端交互必须用 `"use server"` |
-| shadcn/ui First | 优先复用 shadcn/ui 组件 |
+| HeroUI First | 未明确指定时优先使用 HeroUI 组件 |
 | Tailwind CSS | 样式必须使用 Tailwind |
 | Schema First | 数据库变更必须先修改 `schema.prisma` |
 | Zod 验证 | 所有输入必须 Zod 验证 |

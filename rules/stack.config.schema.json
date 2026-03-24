@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stack Config",
+  "description": "项目模块配置。AI 助手和脚本读取此文件决定激活哪些模块的规则。",
+  "type": "object",
+  "required": ["name", "modules"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "项目名称"
+    },
+    "description": {
+      "type": "string",
+      "description": "项目简述"
+    },
+    "modules": {
+      "type": "object",
+      "description": "模块开关。true = 激活该模块的规则和约束",
+      "properties": {
+        "db": { "type": "boolean", "description": "Prisma + PostgreSQL + Redis" },
+        "auth": { "type": "boolean", "description": "Auth.js 认证" },
+        "desktop": { "type": "boolean", "description": "Tauri 桌面端" },
+        "ai-services": { "type": "boolean", "description": "AI API 集成 (Claude/Groq/OpenAI)" },
+        "testing": { "type": "boolean", "description": "Vitest + Playwright + Storybook" }
+      },
+      "additionalProperties": { "type": "boolean" }
+    },
+    "notes": {
+      "type": "string",
+      "description": "备注说明"
+    }
+  }
+}

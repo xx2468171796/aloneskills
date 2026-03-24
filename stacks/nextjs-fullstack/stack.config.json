@@ -1,0 +1,11 @@
+{
+  "name": "fullstack-project",
+  "description": "Next.js 全栈预设 — 包含数据库、认证、桌面端、测试全套",
+  "modules": {
+    "db": true,
+    "auth": true,
+    "desktop": true,
+    "ai-services": false,
+    "testing": true
+  }
+}

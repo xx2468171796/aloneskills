@@ -9,7 +9,7 @@
 | [`ui-ux-pro-max`](./skills/ui-ux-pro-max/SKILL.md) | UI/UX 设计智能 | 设计、配色、字体、布局 |
 | [`skill-creator`](./skills/skill-creator/SKILL.md) | 技能创建指南 | 创建新技能 |
 | [`testing`](./skills/testing/SKILL.md) | 测试规范 | 单元/E2E/组件测试 |
-| [`ui-components`](./skills/ui-components/SKILL.md) | UI 组件开发 | React + HeroUI |
+| [`ui-components`](./skills/ui-components/SKILL.md) | UI 组件开发 | React + shadcn/ui |
 | [`build-standards`](./skills/build-standards/SKILL.md) | 构建规范 | Next.js + Tauri |
 | [`db-operations`](./skills/db-operations/SKILL.md) | 数据库操作 | Prisma + Repository |
 | [`auth`](./skills/auth/SKILL.md) | 用户认证 | Auth.js + Session |
@@ -99,7 +99,7 @@ aloneskills/
 
 这些技能针对以下技术栈优化：
 
-- **前端**: React / Next.js + Tailwind CSS + HeroUI（未指定时默认）
+- **前端**: React / Next.js + Tailwind CSS + shadcn/ui
 - **后端**: Server Actions / Prisma
 - **认证**: Auth.js (NextAuth)
 - **桌面端**: Tauri v2
@@ -111,7 +111,7 @@ aloneskills/
 
 | 技术栈 | 说明 |
 |--------|------|
-| [`nextjs-fullstack`](./stacks/nextjs-fullstack/STACK.md) | Next.js 16 + React 19 + Tailwind + HeroUI + Prisma + Auth.js |
+| [`nextjs-fullstack`](./stacks/nextjs-fullstack/STACK.md) | Next.js 16 + React 19 + Tailwind + shadcn/ui + Prisma + Auth.js |
 
 ### 技术栈内容
 

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm *)",
+      "Bash(npx shadcn@latest *)",
+      "Bash(biome *)"
+    ]
+  },
+  "env": {
+    "OMC_PROJECT_TYPE": "nextjs-fullstack",
+    "OMC_MODULES": "ai-services,testing"
+  }
+}

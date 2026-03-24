@@ -1,2 +1,29 @@
 # Ignore local docs
 stacks/nextjs-fullstack/doc/需求.md
+
+# OMC state (session-specific, not shared)
+.omc/state/
+.omc/logs/
+.omc/notepad.md
+.omc/project-memory.json
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build
+.next/
+dist/
+.turbo/
+
+# Claude Code (local settings not shared)
+.claude/settings.local.json
+
+# IDE
+.vscode/
+.idea/

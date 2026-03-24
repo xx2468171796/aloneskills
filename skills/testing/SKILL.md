@@ -9,6 +9,8 @@ description: 测试规范技能。在需要编写单元测试、集成测试、E
 
 ## 适用技术栈
 
+> 版本号见 `@rules/versions.md` | 所需模块: `testing`
+
 - **Vitest** - 单元测试 / 集成测试
 - **Playwright** - E2E 测试
 - **React Testing Library** - 组件测试
@@ -123,7 +125,7 @@ export default defineConfig({
     { name: "chromium", use: { ...devices["Desktop Chrome"] } },
   ],
   webServer: {
-    command: "npm run dev",
+    command: "pnpm dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
   },
@@ -153,19 +155,19 @@ test.describe("Authentication", () => {
 
 ```bash
 # 单元测试
-npm test
+pnpm test
 
 # 监听模式
-npm test -- --watch
+pnpm test -- --watch
 
 # 覆盖率
-npm test -- --coverage
+pnpm test -- --coverage
 
 # E2E 测试
-npx playwright test
+pnpm playwright test
 
 # E2E UI 模式
-npx playwright test --ui
+pnpm playwright test --ui
 ```
 
 ## 覆盖率要求

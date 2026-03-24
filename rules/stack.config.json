@@ -1,0 +1,13 @@
+{
+  "$schema": "./stack.config.schema.json",
+  "name": "voice-to-mindmap",
+  "description": "语音转思维导图 — 录音上传、AI 转写、结构化生成思维导图",
+  "modules": {
+    "db": false,
+    "auth": false,
+    "desktop": false,
+    "ai-services": true,
+    "testing": true
+  },
+  "notes": "MVP 阶段只需 AI 服务模块。db/auth/desktop 后续按需开启。"
+}

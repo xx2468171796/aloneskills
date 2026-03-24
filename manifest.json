@@ -1,53 +1,81 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "aloneskills",
-  "description": "基于 Agent Skills 开放标准的 AI 技能库",
+  "description": "基于 Agent Skills 开放标准的 AI 技能库 — 模块化技术栈 + 可复用工作流",
   "repository": "https://github.com/xx2468171796/aloneskills",
+  "rules": {
+    "core": "rules/core.md",
+    "ai-behavior": "rules/ai-behavior.md",
+    "coding-standards": "rules/coding-standards.md",
+    "versions": "rules/versions.md",
+    "skill-router": "rules/技能自动评估规则.md",
+    "decision-tree": "rules/技能自动评估决策树.md",
+    "config": "rules/stack.config.json"
+  },
+  "modules": {
+    "db": "rules/modules/db.md",
+    "auth": "rules/modules/auth.md",
+    "desktop": "rules/modules/desktop.md",
+    "ai-services": "rules/modules/ai-services.md",
+    "testing": "rules/modules/testing.md"
+  },
+  "presets": {
+    "nextjs-fullstack": "stacks/nextjs-fullstack/stack.config.json"
+  },
   "skills": [
     {
       "name": "ui-ux-pro-max",
-      "description": "AI 驱动的设计智能技能。当需要构建 UI/UX（设计、创建、实现、审查、修复、改进界面）时使用此技能。提供 UI 风格、配色方案、字体搭配、图表类型和 UX 指南的智能推荐。默认使用 HeroUI（未指定时优先）。",
-      "path": "skills/ui-ux-pro-max/SKILL.md"
+      "description": "AI 驱动的设计智能技能。UI 风格、配色方案、字体搭配、图表类型和 UX 指南的智能推荐。默认使用 shadcn/ui。",
+      "path": "skills/ui-ux-pro-max/SKILL.md",
+      "requires": []
     },
     {
       "name": "skill-creator",
-      "description": "创建和管理 AI 技能的指南。当需要创建新技能、更新现有技能、或扩展 AI 助手能力时使用此技能。包含技能结构、编写规范、验证流程。基于 Agent Skills 开放标准。",
-      "path": "skills/skill-creator/SKILL.md"
+      "description": "创建和管理 AI 技能的指南。包含技能结构、编写规范、验证流程。基于 Agent Skills 开放标准。",
+      "path": "skills/skill-creator/SKILL.md",
+      "requires": []
     },
     {
       "name": "testing",
-      "description": "测试规范技能。在需要编写单元测试、集成测试、E2E 测试、组件测试时使用此技能。适用于 Vitest + Playwright + React Testing Library 技术栈。",
-      "path": "skills/testing/SKILL.md"
+      "description": "测试规范技能。适用于 Vitest + Playwright + React Testing Library 技术栈。",
+      "path": "skills/testing/SKILL.md",
+      "requires": ["testing"]
     },
     {
       "name": "ui-components",
-      "description": "UI 组件开发技能。在需要创建页面、组件、表单、表格、弹窗等 UI 元素时使用此技能。默认使用 HeroUI（如需 shadcn/ui 必须明确说明）。",
-      "path": "skills/ui-components/SKILL.md"
+      "description": "UI 组件开发技能。默认使用 shadcn/ui 组件库。",
+      "path": "skills/ui-components/SKILL.md",
+      "requires": []
     },
     {
       "name": "build-standards",
-      "description": "打包构建规范技能。在需要配置开发环境、生产构建、桌面端、环境变量等时使用此技能。适用于 Next.js + Turbopack + Tauri 技术栈。",
-      "path": "skills/build-standards/SKILL.md"
+      "description": "打包构建规范技能。适用于 Next.js + Turbopack + Tauri 技术栈。",
+      "path": "skills/build-standards/SKILL.md",
+      "requires": []
     },
     {
       "name": "db-operations",
-      "description": "数据库操作技能。在需要进行数据库查询、创建、更新、删除、迁移等操作时使用此技能。适用于 Prisma ORM + PostgreSQL + Repository 模式 + Zod 验证。",
-      "path": "skills/db-operations/SKILL.md"
+      "description": "数据库操作技能。适用于 Prisma ORM + PostgreSQL + Repository 模式 + Zod 验证。",
+      "path": "skills/db-operations/SKILL.md",
+      "requires": ["db"]
     },
     {
       "name": "auth",
-      "description": "用户认证与会话管理技能。在需要实现登录、注册、登出、Session 管理、OAuth 集成、密码重置等功能时使用此技能。适用于 Auth.js (NextAuth) v5 + Session 管理。",
-      "path": "skills/auth/SKILL.md"
+      "description": "用户认证与会话管理技能。适用于 Auth.js v5 + Session 管理。",
+      "path": "skills/auth/SKILL.md",
+      "requires": ["auth", "db"]
     },
     {
       "name": "rbac",
-      "description": "角色权限控制技能。在需要实现权限检查、菜单授权、路由守卫、数据范围控制等功能时使用此技能。适用于基于角色的访问控制 (RBAC) 模式。",
-      "path": "skills/rbac/SKILL.md"
+      "description": "角色权限控制技能。适用于基于角色的访问控制 (RBAC) 模式。",
+      "path": "skills/rbac/SKILL.md",
+      "requires": ["auth"]
     },
     {
       "name": "feature-evaluation",
-      "description": "新功能评估技能。在开始任何新功能开发前使用此技能，评估技术约束、检查架构原则、确认是否需要设计文档。确保开发符合项目规范。",
-      "path": "skills/feature-evaluation/SKILL.md"
+      "description": "新功能评估技能。在开始任何新功能开发前使用此技能，评估技术约束、检查架构原则。",
+      "path": "skills/feature-evaluation/SKILL.md",
+      "requires": []
     }
   ]
 }
